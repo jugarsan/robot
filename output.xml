@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20161118 00:13:10.174" generator="Robot 3.0 (Python 2.7.6 on darwin)">
+<suite source="/Users/jgarcia/projects/workshop/scripts/loginHotmail.robot" id="s1" name="loginHotmail">
+<test id="s1-t1" name="Hotmail page - invalid user name validation">
+<kw name="open browser and go to hotmail" library="loginHotmail">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>https://www.hotmail.com</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20161118 00:13:11.518" level="INFO">Opening browser 'chrome' to base url 'https://www.hotmail.com'</msg>
+<status status="PASS" endtime="20161118 00:13:14.283" starttime="20161118 00:13:11.518"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20161118 00:13:14.648" starttime="20161118 00:13:14.283"></status>
+</kw>
+<status status="PASS" endtime="20161118 00:13:14.649" starttime="20161118 00:13:11.518"></status>
+</kw>
+<kw name="verify elements are present" library="loginHotmail">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10 sec</arg>
+<arg>5 sec</arg>
+<arg>page should contain element</arg>
+<arg>${header_label}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${header_label}</arg>
+</arguments>
+<msg timestamp="20161118 00:13:14.664" level="INFO">Current page contains element 'id=loginHeader'.</msg>
+<status status="PASS" endtime="20161118 00:13:14.665" starttime="20161118 00:13:14.650"></status>
+</kw>
+<status status="PASS" endtime="20161118 00:13:14.665" starttime="20161118 00:13:14.649"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10 sec</arg>
+<arg>5 sec</arg>
+<arg>element text should be</arg>
+<arg>${header_label}</arg>
+<arg>Sign in</arg>
+</arguments>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
+<arguments>
+<arg>${header_label}</arg>
+<arg>Sign in</arg>
+</arguments>
+<msg timestamp="20161118 00:13:14.665" level="INFO">Verifying element 'id=loginHeader' contains exactly text 'Sign in'.</msg>
+<status status="PASS" endtime="20161118 00:13:14.697" starttime="20161118 00:13:14.665"></status>
+</kw>
+<status status="PASS" endtime="20161118 00:13:14.697" starttime="20161118 00:13:14.665"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10 sec</arg>
+<arg>5 sec</arg>
+<arg>page should contain element</arg>
+<arg>${username_input}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${username_input}</arg>
+</arguments>
+<msg timestamp="20161118 00:13:14.714" level="INFO">Current page contains element 'id=i0116'.</msg>
+<status status="PASS" endtime="20161118 00:13:14.714" starttime="20161118 00:13:14.698"></status>
+</kw>
+<status status="PASS" endtime="20161118 00:13:14.714" starttime="20161118 00:13:14.698"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10 sec</arg>
+<arg>5 sec</arg>
+<arg>page should contain element</arg>
+<arg>${next_button}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${next_button}</arg>
+</arguments>
+<msg timestamp="20161118 00:13:14.730" level="INFO">Current page contains element 'id=idSIButton9'.</msg>
+<status status="PASS" endtime="20161118 00:13:14.730" starttime="20161118 00:13:14.714"></status>
+</kw>
+<status status="PASS" endtime="20161118 00:13:14.730" starttime="20161118 00:13:14.714"></status>
+</kw>
+<status status="PASS" endtime="20161118 00:13:14.730" starttime="20161118 00:13:14.649"></status>
+</kw>
+<kw name="enter invalid username" library="loginHotmail">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10 sec</arg>
+<arg>5 sec</arg>
+<arg>input text</arg>
+<arg>${username_input}</arg>
+<arg>asdfafsdfd@sss</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${username_input}</arg>
+<arg>asdfafsdfd@sss</arg>
+</arguments>
+<msg timestamp="20161118 00:13:14.731" level="INFO">Typing text 'asdfafsdfd@sss' into text field 'id=i0116'</msg>
+<status status="PASS" endtime="20161118 00:13:14.816" starttime="20161118 00:13:14.731"></status>
+</kw>
+<status status="PASS" endtime="20161118 00:13:14.816" starttime="20161118 00:13:14.731"></status>
+</kw>
+<status status="PASS" endtime="20161118 00:13:14.816" starttime="20161118 00:13:14.731"></status>
+</kw>
+<kw name="click on next button" library="loginHotmail">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10 sec</arg>
+<arg>5 sec</arg>
+<arg>click element</arg>
+<arg>${next_button}</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${next_button}</arg>
+</arguments>
+<msg timestamp="20161118 00:13:14.817" level="INFO">Clicking element 'id=idSIButton9'.</msg>
+<status status="PASS" endtime="20161118 00:13:14.848" starttime="20161118 00:13:14.817"></status>
+</kw>
+<status status="PASS" endtime="20161118 00:13:14.848" starttime="20161118 00:13:14.816"></status>
+</kw>
+<status status="PASS" endtime="20161118 00:13:14.848" starttime="20161118 00:13:14.816"></status>
+</kw>
+<kw name="verify that error message is displayed" library="loginHotmail">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10 sec</arg>
+<arg>5 sec</arg>
+<arg>page should contain element</arg>
+<arg>${usernameError_label}</arg>
+</arguments>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>${usernameError_label}</arg>
+</arguments>
+<msg timestamp="20161118 00:13:14.861" level="INFO">Current page contains element 'id=usernameError'.</msg>
+<status status="PASS" endtime="20161118 00:13:14.861" starttime="20161118 00:13:14.849"></status>
+</kw>
+<status status="PASS" endtime="20161118 00:13:14.861" starttime="20161118 00:13:14.849"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>10 sec</arg>
+<arg>5 sec</arg>
+<arg>element text should be</arg>
+<arg>${usernameError_label}</arg>
+<arg>Please enter a valid email address, phone number, or Skype name.</arg>
+</arguments>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
+<arguments>
+<arg>${usernameError_label}</arg>
+<arg>Please enter a valid email address, phone number, or Skype name.</arg>
+</arguments>
+<msg timestamp="20161118 00:13:14.862" level="INFO">Verifying element 'id=usernameError' contains exactly text 'Please enter a valid email address, phone number, or Skype name.'.</msg>
+<status status="PASS" endtime="20161118 00:13:14.881" starttime="20161118 00:13:14.861"></status>
+</kw>
+<status status="PASS" endtime="20161118 00:13:14.881" starttime="20161118 00:13:14.861"></status>
+</kw>
+<status status="PASS" endtime="20161118 00:13:14.881" starttime="20161118 00:13:14.849"></status>
+</kw>
+<kw type="teardown" name="close browser and report" library="loginHotmail">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20161118 00:13:14.944" starttime="20161118 00:13:14.882"></status>
+</kw>
+<status status="PASS" endtime="20161118 00:13:14.944" starttime="20161118 00:13:14.882"></status>
+</kw>
+<status status="PASS" endtime="20161118 00:13:14.944" critical="yes" starttime="20161118 00:13:11.517"></status>
+</test>
+<doc>Test case file for robot framework workshop</doc>
+<status status="PASS" endtime="20161118 00:13:14.945" starttime="20161118 00:13:10.175"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="loginHotmail" pass="1">loginHotmail</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
